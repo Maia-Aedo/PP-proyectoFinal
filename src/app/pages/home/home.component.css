@@ -161,9 +161,8 @@ svg {
 
 .info {
     font-size: 17.6px;
-    margin-top: 160px;
-    margin-left: 40px;
-    margin-bottom: 65px;
+    margin-left: 100px !important;
+    margin-right: 100px !important;
     color: black;
 }
 
@@ -369,7 +368,7 @@ button:hover .button-text {
 
 .header {
     align-items: center;
-    margin-left: 320px;
+    margin-left: 420px;
     justify-content: center;
     margin-top: 40px;
 }
