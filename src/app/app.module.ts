@@ -26,12 +26,13 @@ import { PagesModule } from './pages/pages.module';
 import { MaterialModule } from './material/material.module';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 //services
 import { CookieService } from 'ngx-cookie-service';
-import { LoginService } from './servicios/login.service';
 import { EmpleadosService } from './servicios/empleados.service';
 import { LoginWithGoogleService } from './servicios/login-google.service';
 
@@ -60,9 +61,11 @@ import { LoginWithGoogleService } from './servicios/login-google.service';
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
     CommonModule
   ],
-  providers: [CookieService, LoginService, LoginWithGoogleService, EmpleadosService],
+  providers: [CookieService, LoginWithGoogleService, EmpleadosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
