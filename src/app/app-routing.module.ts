@@ -18,8 +18,12 @@ const routes: Routes = [
   { path: 'sobre-nosotros', component: NosotrosComponent },
   { path: 'empleados', component: EmpleadosComponent },
   { path: 'lista-empleados', component: EmpleadosComponent },
-  { path: 'agregar-empleado', component: CrearEmpleadoComponent },
   { path: 'crear-empleado', component: CrearEmpleadoComponent },
+  /* se pasa un parametro dinamico (id) 
+  el front realiza una peticion a la base de datos y  
+  el front devuelve los campos rellenos del id en el formulario crearEmpleado*/
+  { path: 'editar-empleado/:id', component: CrearEmpleadoComponent },
+  { path: 'agregar-empleado', component: CrearEmpleadoComponent },
   { path: 'login', component: LoginComponent },
   { path: 'nosotros', component: NosotrosComponent },
   { path: '**', component: HomeComponent },

@@ -1,9 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
 .card {
     margin-top: 150px;
 }
 
 .btn {
     margin-left: 600px;
+}
+
+.title {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 40px;
 }
 
 button {

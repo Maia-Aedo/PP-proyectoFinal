@@ -30,6 +30,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { ToastrModule } from 'ngx-toastr';
 
 //services
 import { CookieService } from 'ngx-cookie-service';
@@ -58,6 +59,7 @@ import { LoginWithGoogleService } from './servicios/login-google.service';
     FormsModule,
     ReactiveFormsModule,
     PagesModule,  
+    ToastrModule.forRoot(),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),

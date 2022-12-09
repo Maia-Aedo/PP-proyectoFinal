@@ -8,6 +8,7 @@
 
 .inicio {
     padding: 3px 100px;
+    margin: 0px 10px;
 }
 
 .estadisticas {
@@ -16,6 +17,8 @@
     float: right;
     transition: all 50ms ease;
     margin-left: 10px;
+    height: 300px;
+    width: 500px;
 }
 
 .estadisticas:hover {
